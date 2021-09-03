@@ -1,0 +1,61 @@
+{
+  "restDayProbability": 3,
+  "tasks": [
+    {
+      "label": "【日常】: 笔记复习、迁移、整理",
+      "randCategory": [],
+      "probability": 50,
+      "isWeekTask": false
+    },
+    {
+      "label": "【日常】: $category1 $category2 学习",
+      "randCategory": [
+        [
+          {
+            "label": "js",
+            "ratio": 40
+          },
+          {
+            "label": "go",
+            "ratio": 40
+          },
+          {
+            "label": "dart",
+            "ratio": 20
+          }
+        ],
+        [
+          {
+            "label": "收藏文章",
+            "ratio": 50
+          },
+          {
+            "label": "标准库 > TODO > 生态内容",
+            "ratio": 50
+          }
+        ]
+      ],
+      "probability": 85
+    },
+    {
+      "label": "【阅读】: 深入理解计算机系统",
+      "probability": 0.85
+    },
+    {
+      "label": "【探索任务】: 深入学习 go携程",
+      "probability": 85
+    },
+    {
+      "label": "【实战任务】: 进行实战任务             ",
+      "probability": 90
+    },
+    {
+      "label": "【支线】:\n      * 英语(单词 10, 书籍一小节)\n      * 数学(公式或公式记忆) * 1  ",
+      "probability": 85
+    },
+    {
+      "label": "【周末特供】: 整理当周新的技术文章并记录到对应todo * 1",
+      "isWeekTask": true
+    }
+  ]
+}
