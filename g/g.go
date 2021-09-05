@@ -105,6 +105,11 @@ func generate(tasks []Task) []Task {
 			for _, categories := range task.RandCategory {
 				categoryRand := getProportion()
 
+				// 取值为0-99
+				if categoryRand == 100 {
+					categoryRand--
+				}
+
 				lastRatio := 0.0
 
 				for _, category := range categories {
