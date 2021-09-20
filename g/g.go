@@ -3,12 +3,13 @@ package g
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/shogo82148/go-shuffle"
 	"io/ioutil"
 	"math/rand"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/shogo82148/go-shuffle"
 )
 
 // RandCategory 随机分类，对应 Task.randCategory
@@ -31,8 +32,8 @@ type TaskConfig struct {
 }
 
 func G() {
-	rand.Seed(time.Now().Unix())
-	var input string
+	rand.Seed(time.Now().UnixNano())
+	// var input string
 	config, err := readConfig()
 
 	if err != nil {
@@ -55,9 +56,9 @@ func G() {
 		}
 	}
 
-	fmt.Println("请按Enter退出...")
+	// fmt.Println("请按Enter退出...")
 
-	fmt.Scanln(&input)
+	// fmt.Scanln(&input)
 }
 
 // readConfig 从配置文件中读取配置
@@ -112,7 +113,10 @@ func generate(tasks []Task) []Task {
 
 				lastRatio := 0.0
 
+				fmt.Println(categoryRand)
+
 				for _, category := range categories {
+					fmt.Println(category.Ratio+lastRatio, category.Label)
 					if categoryRand < category.Ratio+lastRatio {
 						labelValues = append(labelValues, category.Label)
 						break
